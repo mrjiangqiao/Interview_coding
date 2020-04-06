@@ -28,3 +28,6 @@ f[x,y,i,j] = f[x,y,i,j] + f[x,mid_pair,i,m]*f[mid_pair+1,y,n,j]
 2. 问题解析
 * 部分有序序列可以使用二分查找来进行处理
 * 返回数组中小于等于当前中间值的数字的数量，从而不断地缩小查找范围更新中间值
+
+### Singlelist.py
+使用python实现单链表，转载，对应博客内容请参考[博客链接]（https://www.cnblogs.com/yudanqu/）

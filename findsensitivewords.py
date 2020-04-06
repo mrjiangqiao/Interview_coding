@@ -6,6 +6,7 @@ def matchfunc(relpace_word):
 		lenflg = len(text)
 		return relpace_word*lenflg
 	return replace
+
 a =int(input().strip())
 word_list = []
 for i in range(a):
