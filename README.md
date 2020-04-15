@@ -1,7 +1,13 @@
 # Interview_coding
-Interview coding practice, implement with python3
+Interview coding practice, implement with python3, tend to CV direction
 
 ## file lists
+
+### DistanceToNextLargernum.py
+1. 问题描述
+输入整数序列，最大100，输出当前元素到之后第一个比他大的元素的距离，
+没有更大的话输出-1，比如输入1，20，10，40输出1，2，1，-1，时间复杂度不大于O（n）
+
 ### dp_forBracketStaining.py
 1. 问题描述
 成对括号染色问题：Codeforced 149D
@@ -22,21 +28,24 @@ RGB是一种很普遍的染色方案，现在需要你把部分括号染成绿�
 f[x,y,i,j] = f[x,y,i,j] + f[x,mid_pair,i,m]*f[mid_pair+1,y,n,j]
 ```
 
+### dp_prac1.py
+1. 问题描述
+拿出装有货物的保温箱，需在最短的时间内用最少的保温箱将货物装好。 
+我们把问题简单描述一下: 
+	* 每个货物占用空间都一模一样 
+	* 保温箱的最大容量是不一样的,每个保温箱由两个值描述: 保温箱的最大容量 bi ,当前已有货物个数 ai ,(ai<=bi) 
+	* 货物转移的时候,不必一次性全部转移,每转移一件货物需要花费 1秒 的时间
+
+2. 问题解析 
+dp[cpaticity][2]，其中列里的两维对应为[k,food],表示装capticity的东西，需要最少k个保温箱，而这k个箱重原先有food的已装货物
+初始化时，dp[0]=[0][0], 其他初始化为[len(food)，0],依次遍历最终包含每个保温箱时的情况，对dp进行不断地更新
+
 ### find_kth_in_specific_array.py
 1. 问题描述
 找到N行M列矩阵中第k大的数字
 2. 问题解析
 * 部分有序序列可以使用二分查找来进行处理
 * 返回数组中小于等于当前中间值的数字的数量，从而不断地缩小查找范围更新中间值
-
-### Singlelist.py
-使用python实现单链表，转载，对应博客内容请参考[博客链接]（https://www.cnblogs.com/yudanqu/）
-
-### findthelongestSubstring.py
-1. 功能描述
-lengthOfLongestSubstring(self, s: str)  给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。
-minWindow(self, s: 'str', t: 'str') 从S串中找到覆盖t串全部字符地最小子串
-lengthOfLongestSubstringTwoDistinct(self, s: str) 寻找一个字符串中最多包含两个不同字符地最长子串
 
 ### FindMedianSortedArrays.py
 1. 问题描述
@@ -45,11 +54,6 @@ lengthOfLongestSubstringTwoDistinct(self, s: str) 寻找一个字符串中最多
 将两个有序序列分别取midi,midj将原序列分为两个部分，并合并左侧部分作为min_left,合并右侧部分（包含midi与midj处的值）作为max_right。
 令左右两部分满足左边的最大值小于右侧的最小值，并保障两个部分中元素数量差值小于等于1。
 满足上述的序列中很容易获得两个有序序列合并后的中值。
-
-### DistanceToNextLargernum.py
-1. 问题描述
-输入整数序列，最大100，输出当前元素到之后第一个比他大的元素的距离，
-没有更大的话输出-1，比如输入1，20，10，40输出1，2，1，-1，时间复杂度不大于O（n）
 
 ### findsensitivewords.py
 1. 问题描述
@@ -61,15 +65,29 @@ lengthOfLongestSubstringTwoDistinct(self, s: str) 寻找一个字符串中最多
 1. 问题描述
 将字符串变换具有相似模式的顺序字符串，如将“efggac”转换为“abccde”
 
+### findthelongestSubstring.py
+1. 功能描述
+lengthOfLongestSubstring(self, s: str)  给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。
+minWindow(self, s: 'str', t: 'str') 从S串中找到覆盖t串全部字符地最小子串
+lengthOfLongestSubstringTwoDistinct(self, s: str) 寻找一个字符串中最多包含两个不同字符地最长子串
+
 ### mergesort_and_quicksort.py
 1. 功能描述
 快速排序以及归并排序的简单实现
 
+### NMS.py
+1. 功能描述
+python手写NMS实现代码
+
 ### re_char2ascii.py
-1、功能描述
+1. 功能描述
 将excel表格的单元格描述方式进行转换
 change1()函数将“R15C29”转换为对应的“AC15”
 change2()函数将“AC15”转换为对应的“R15C29”
+
+### Singlelist.py
+1. 功能描述
+使用python实现单链表，转载，对应博客内容请参考[博客链接]（https://www.cnblogs.com/yudanqu/）
 
 
 
