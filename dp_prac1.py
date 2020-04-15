@@ -10,7 +10,7 @@
 # food = list(map(int, input().strip().split()))
 # capacity = list(map(int, input().strip().split()))
 
-food = [1，2，3]
+food = [5, 2, 3]
 capacity = [6, 3, 4]
 n = len(food)
 
