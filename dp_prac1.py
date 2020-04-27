@@ -30,7 +30,6 @@ for k in range(1, n+1):
             dp[i][1] = weight + food[k-1]
         else:
             dp[i][1] = max(weight + food[k - 1], dp[i][1])
-print(dp[:][:])
 
 min_step = 0
 min_bin = n
